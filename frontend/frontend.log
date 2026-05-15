@@ -1,0 +1,55 @@
+
+> student-dashboard-frontend@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m645[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m10:20:00 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx, /src/index.css[22m
+[2m10:20:00 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx, /src/index.css[22m
+[2m10:20:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx, /src/index.css[22m
+[2m10:20:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx, /src/index.css[22m
+[2m10:20:15 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx, /src/index.css[22m
+[2m10:20:27 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Overview.jsx, /src/index.css[22m
+[2m10:20:36 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Overview.jsx, /src/index.css[22m
+[2m10:20:46 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Overview.jsx, /src/index.css[22m
+[2m10:20:54 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/index.css[22m
+[2m10:21:00 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/index.css[22m
+[2m10:21:06 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/index.css[22m
+[2m10:21:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/index.css[22m
+[2m10:21:23 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/context/AuthContext.jsx, /src/index.css[22m
+[2m10:21:24 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.jsx[22m Could not Fast Refresh ("AuthContext" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m10:21:24 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/context/AuthContext.jsx[22m
+[2m10:21:33 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/context/AuthContext.jsx, /src/index.css[22m
+[2m10:21:34 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.jsx[22m Could not Fast Refresh ("AuthContext" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m10:21:34 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/context/AuthContext.jsx[22m
+[2m10:21:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/context/AuthContext.jsx, /src/index.css[22m
+[2m10:21:40 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.jsx[22m Could not Fast Refresh ("AuthContext" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m10:21:40 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/context/AuthContext.jsx[22m
+[2m10:22:05 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/routes/AppRoutes.jsx, /src/index.css[22m
+[2m10:22:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/routes/AppRoutes.jsx, /src/index.css[22m
+[2m10:22:14 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/index.css[22m
+[2m10:22:31 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Sidebar.jsx, /src/index.css[22m
+[2m10:23:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx, /src/index.css[22m
+[2m10:23:10 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx, /src/index.css[22m
+[2m10:23:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx, /src/index.css[22m
+[2m10:23:18 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx, /src/index.css[22m
+[2m10:23:18 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx, /src/index.css[22m
+[2m11:01:26 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/AddStudent.jsx, /src/pages/EditStudent.jsx, /src/pages/Overview.jsx, /src/pages/Students.jsx[22m
+[2m11:01:57 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Sidebar.jsx, /src/index.css[22m
+[2m11:02:08 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx, /src/index.css[22m
+[2m11:02:17 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/DashboardLayout.jsx, /src/index.css[22m
+[2m11:03:01 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Overview.jsx, /src/index.css[22m
+[2m11:03:15 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Students.jsx, /src/index.css[22m
+[2m11:03:20 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Students.jsx, /src/index.css[22m
+[2m11:03:28 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Students.jsx, /src/index.css[22m
+[2m11:03:35 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AddStudent.jsx, /src/index.css[22m
+[2m11:03:43 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AddStudent.jsx, /src/index.css[22m
+[2m11:03:48 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AddStudent.jsx, /src/index.css[22m
+[2m11:03:55 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/EditStudent.jsx, /src/index.css[22m
+[2m11:04:01 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/EditStudent.jsx, /src/index.css[22m
+[2m11:04:09 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/EditStudent.jsx, /src/index.css[22m
+[2m11:12:30 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/DashboardLayout.jsx, /src/index.css[22m
+[2m11:12:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Overview.jsx, /src/index.css[22m

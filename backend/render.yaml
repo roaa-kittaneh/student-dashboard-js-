@@ -1,0 +1,32 @@
+# Optional: drop this at the repo root for one-click Render Blueprint deploys.
+# Then create a Web Service via "New + → Blueprint".
+services:
+  - type: web
+    name: student-dashboard-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_HOURS
+        value: 12
+      - key: DATABASE_URL
+        value: sqlite:////var/data/students.db
+      - key: CORS_ORIGINS
+        sync: false   # set in dashboard to your Vercel origin
+      - key: ADMIN_EMAIL
+        value: admin@example.com
+      - key: ADMIN_PASSWORD
+        sync: false   # rotate in dashboard
+    disk:
+      name: data
+      mountPath: /var/data
+      sizeGB: 1
