@@ -2,31 +2,50 @@
 
 Full-stack student management application — **React + Vite + Tailwind** frontend with a **Flask + SQLite** API. JWT auth, protected routes, debounced search, server-side filters and pagination, dark mode, and toast notifications.
 
-## Architecture
+###project link
+(https://student-dashboard-js.vercel.app)
+
+###live demo
+https://drive.google.com/drive/folders/1eLSkVbl5On73m3AY8wvEuNHq1_AICxn6?usp=sharing
+
+### screenshots
+<img width="1335" height="573" alt="Screenshot 2026-05-16 205413" src="https://github.com/user-attachments/assets/2e778509-29f7-4c04-b070-6753605990e8" />
+<img width="1328" height="566" alt="Screenshot 2026-05-16 205422" src="https://github.com/user-attachments/assets/62fd267d-de0d-462f-8bb3-1b5096739421" />
+<img width="1332" height="553" alt="Screenshot 2026-05-16 205450" src="https://github.com/user-attachments/assets/4f7e4ea3-f6ae-4bd8-aad1-1236db6c54ca" />
+<img width="1324" height="552" alt="Screenshot 2026-05-16 205504" src="https://github.com/user-attachments/assets/6a54ba6a-b071-4312-b3ff-424f7f46d2fe" />
+<img width="1341" height="584" alt="Screenshot 2026-05-16 205520" src="https://github.com/user-attachments/assets/707b20c2-cd59-46ff-8945-c30535c46afe" />
+<img width="1334" height="566" alt="Screenshot 2026-05-16 205527" src="https://github.com/user-attachments/assets/97d4a319-1d34-4287-8d71-587748a6349e" />
+<img width="558" height="536" alt="Screenshot 2026-05-16 205546" src="https://github.com/user-attachments/assets/6a993975-01f4-4a7b-a6fd-51adabf8334d" />
+<img width="532" height="260" alt="image" src="https://github.com/user-attachments/assets/1abac7a5-d54b-4962-be66-98180061e517" />
+<img width="784" height="526" alt="image" src="https://github.com/user-attachments/assets/e26c51b7-2c7f-4212-83e0-c6413f40658c" />
+
+<img width="1365" height="168" alt="Screenshot 2026-05-16 205359" src="https://github.com/user-attachments/assets/42d9ab32-59ee-4e71-b971-5a6e065ef2b1" />
+<img width="677" height="277" alt="Screenshot 2026-05-15 225256" src="https://github.com/user-attachments/assets/0ba7fef1-370f-4c2f-a2b5-5c2e51fb1adb" />
+<img width="673" height="254" alt="Screenshot 2026-05-16 000303" src="https://github.com/user-attachments/assets/427f5aa4-ffea-432a-8ed8-0ad00bbf516d" />
+<img width="993" height="418" alt="Screenshot 2026-05-16 014444" src="https://github.com/user-attachments/assets/2053913b-1461-4e57-b53b-863272eda2b7" />
+<img width="1093" height="449" alt="image" src="https://github.com/user-attachments/assets/939ad306-fb7a-4096-a1c2-b8c17a532aaa" />
+
+
+
+
+
+
+
+
 
 ```
-student-dashboard/
-├── backend/                  # Flask API (auth + students CRUD)
-│   ├── app.py                # App factory + seeding
-│   ├── config.py             # Env-driven config
-│   ├── models.py             # SQLAlchemy: User, Student
-│   ├── auth.py               # JWT issue + require_auth decorator
-│   ├── routes_auth.py        # POST /api/auth/login
-│   ├── routes_students.py    # CRUD + search/filter/paginate
-│   ├── wsgi.py               # Gunicorn entrypoint
-│   └── requirements.txt
-└── frontend/                 # Vite + React 18
-    └── src/
-        ├── api/              # axios client + endpoint wrappers
-        ├── components/       # Button, Input, Modal, Toast, Table, Form…
-        ├── context/          # Auth, Theme (dark mode), Toast
-        ├── hooks/            # useAuth, useStudents, useDebounce, useTheme, useToast
-        ├── pages/            # Login, Overview, Students, Add, Edit
-        ├── routes/AppRoutes.jsx
-        ├── utils/validators.js
-        ├── App.jsx
-        └── main.jsx
-```
+### Backend Wake-Up Delay
+
+The backend is hosted on Render's free plan, so it may sleep after inactivity. The first request can be slow and may cause a temporary timeout. To wake the backend, visit:
+
+```text
+https://student-dashboard-js.onrender.com/api/health
+After it returns {"status":"ok"}, refresh the frontend and try again.
+
+
+
+
+
 
 ## Setup instructions
 
@@ -37,7 +56,7 @@ cd backend
 python -m venv .venv
 # Windows: .venv\Scripts\activate     Mac/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env       # then edit secrets
+cp  .env      
 python app.py              # http://localhost:5000
 ```
 
@@ -52,31 +71,8 @@ cp .env.example .env
 npm run dev                # http://localhost:5173
 ```
 
-Vite proxies `/api` -> `http://localhost:5000`, so CORS doesn't trip you up locally.
 
-## Environment variables
 
-### Backend
-
-Create `backend/.env` for local overrides:
-
-```env
-SECRET_KEY=dev-secret-change-me
-JWT_SECRET=dev-jwt-secret-change-me
-JWT_EXPIRES_HOURS=12
-DATABASE_URL=sqlite:///students.db
-CORS_ORIGINS=http://localhost:5173
-ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=admin123
-```
-
-### Frontend
-
-Create `frontend/.env` if the API is not served through the default Vite proxy:
-
-```env
-VITE_API_URL=/api
-```
 
 ### Demo Credentials
 
@@ -85,43 +81,7 @@ admin@example.com
 admin123
 ```
 
-## API Reference
 
-| Method | Endpoint                       | Auth | Notes                                     |
-|--------|--------------------------------|------|-------------------------------------------|
-| POST   | `/api/auth/login`              | —    | Returns `{ token, user }`                 |
-| GET    | `/api/students`                | JWT  | Query: `q`, `department`, `status`, `page`, `pageSize` |
-| GET    | `/api/students/:id`            | JWT  |                                           |
-| POST   | `/api/students`                | JWT  | Body uses camelCase (`firstName` etc.)    |
-| PUT    | `/api/students/:id`            | JWT  | Partial update supported                  |
-| DELETE | `/api/students/:id`            | JWT  |                                           |
-| GET    | `/api/students/meta/departments` | JWT | Distinct list for filter dropdown        |
-| GET    | `/api/health`                  | —    | Liveness probe                            |
 
-### Student payload
-
-```json
-{
-  "id": 1,
-  "firstName": "Ahmad",
-  "lastName": "Saleh",
-  "email": "ahmad@example.com",
-  "age": 21,
-  "department": "Engineering",
-  "status": "active"
-}
-```
-
-`status` ∈ `active | inactive | graduated`.
-
-## Engineering Notes
-
-- **JWT** stored in `localStorage` and injected by an axios request interceptor. A response interceptor broadcasts an `auth:unauthorized` event on `401`, which the `AuthContext` listens to for global logout — clean decoupling.
-- **`useStudents`** owns server pagination, filters, and CRUD invalidation. A monotonically increasing `reqId` ref discards stale responses when filters change mid-flight.
-- **`useDebounce`** keeps search keystrokes from flooding the API.
-- **Validation** is double-layered: client-side (`validators.js`) for UX, server-side (`_validate_payload`) as the source of truth.
-- **Email uniqueness** at the DB layer; `IntegrityError` is mapped to `409 email_already_exists`.
-- **Dark mode** via Tailwind's `class` strategy + `ThemeContext`, with `prefers-color-scheme` fallback.
-- **Bcrypt** password hashing.
 
 See `DEPLOYMENT.md` for production deployment.
